@@ -1,7 +1,10 @@
+import MainScreen from '../pages/MainScreen';
 import logo from '../assets/logo.svg';
 import './App.css';
 
 function App() {
+
+  /*
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +23,9 @@ function App() {
       </header>
     </div>
   );
+  */
+
+  return(MainScreen());
 }
 
 export default App;

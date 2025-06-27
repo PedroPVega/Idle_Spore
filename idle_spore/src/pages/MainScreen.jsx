@@ -1,6 +1,13 @@
 function MainScreen()
 {
-
-    return(<>Main Screen</>)
+    return(
+        <div>
+          <header>
+            <p>
+              Welcome to Idle Spore
+            </p>
+          </header>
+        </div>
+    );
 }
 export default MainScreen;
