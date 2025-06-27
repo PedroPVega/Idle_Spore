@@ -1,4 +1,6 @@
 import MainScreen from '../pages/MainScreen';
+import LowerNavBar from './LowerNavBar';
+import UpperNavBar from './UpperNavBar';
 import logo from '../assets/logo.svg';
 import './App.css';
 
@@ -25,7 +27,13 @@ function App() {
   );
   */
 
-  return(MainScreen());
+  return(
+    <div className="App">
+      <UpperNavBar/>
+      <MainScreen/>
+      <LowerNavBar/>
+    </div>
+  );
 }
 
 export default App;
