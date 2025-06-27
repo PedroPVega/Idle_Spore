@@ -7,11 +7,9 @@ function MainScreen()
     */
     return(
         <div>
-          <header>
             <p>
-              Welcome to Idle Spore
+            Welcome to Idle Spore
             </p>
-          </header>
         </div>
     );
 }
