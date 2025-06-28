@@ -14,7 +14,7 @@ import ProfileIcon from './ProfileIcon';
 
 const pages = ['Discover', 'News', 'Report Bugs', 'Contact'];
 
-function UpperNavBar({page, Navigate, login, setlogin}) 
+function UpperNavBar({Navigate, login, setlogin}) 
 {
     /*
     Functionalities to add to the upper nav bar :

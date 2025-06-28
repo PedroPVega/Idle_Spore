@@ -84,7 +84,7 @@ function App() {
   }
   return(
     <div className="App">
-      <UpperNavBar page = {page} Navigate = {Navigate} login = {loggedIn} setlogin = {SetLoggedIn}/>
+      <UpperNavBar Navigate = {Navigate} login = {loggedIn} setlogin = {SetLoggedIn}/>
       {page === "MainScreen" && <MainScreen/>}
       {page === "SettingsScreen" && <SettingsScreen/>}
       {page === "GameScreen" && <GameScreen/>}

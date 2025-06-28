@@ -1,15 +1,12 @@
-function MainScreen()
+import Button from "@mui/material/Button";
+
+function MainScreen({EvolutionPoints})
 {
-    /*
-    This is the main screen component of my game
-    It will contain every action the gamer can do when entering the game
-    Functionalities and components to add : login, start game, display info on current save, contact info, legal mentions, website plan, updates threads, discover the game
-    */
     return(
         <div>
-            <p>
-            Welcome to Idle Spore
-            </p>
+            <h3>Welcome to Idle Spore</h3>
+            <p>Current save : {EvolutionPoints}</p>
+            <Button variant = "outlined">Launch Game</Button>
         </div>
     );
 }
