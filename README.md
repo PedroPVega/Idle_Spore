@@ -7,7 +7,6 @@ It is an ongoing project that started the 27 of june 2025.
 It was entirely made by myself, besides the ideas taken from Spore, a game entirely owned by EA.
 
 ## TODO-list
-- erase the package.json and package-lock.json files from the root of the project
 - redefine upper and lower nav bars
 - add a little image to the mainscreen and add buttons to launch the game
 
