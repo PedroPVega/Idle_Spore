@@ -7,7 +7,8 @@ It is an ongoing project that started the 27 of june 2025.
 It was entirely made by myself, besides the ideas taken from Spore, a game entirely owned by EA.
 
 ## TODO-list
-- redefine upper and lower nav bars
+- add navigation to lower nav bar
+- delete profile section in settings page when loggin out
 - add a little image to the mainscreen and add buttons to launch the game
 
 ## Legal mentions

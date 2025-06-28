@@ -45,7 +45,7 @@ function UpperNavBar({page, Navigate, login, setlogin})
         <AppBar className = 'AppBar' position = "static">
           <Container className = 'Container' maxWidth="xl">
             <Toolbar disableGutters>
-              <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />  
+              <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} onClick = {() => Navigate("Main Screen")}/>  
               <Typography id = 'logoTitle'
                 variant="h6"
                 noWrap
@@ -60,6 +60,7 @@ function UpperNavBar({page, Navigate, login, setlogin})
                   color: 'inherit',
                   textDecoration: 'none',
                 }}
+                onClick = {() => Navigate("Main Screen")}
               >
                 Idle Spore
               </Typography>
@@ -92,13 +93,13 @@ function UpperNavBar({page, Navigate, login, setlogin})
                   sx={{ display: { xs: 'block', md: 'none' } }}
                 >
                   {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                    <MenuItem key={page} onClick={() => Navigate(page)}>
                       <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                     </MenuItem>
                   ))}
                 </Menu>
               </Box>
-              <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+              <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} onClick = {() => Navigate("Main Screen")}/>
               <Typography
                 variant="h5"
                 noWrap
@@ -114,14 +115,15 @@ function UpperNavBar({page, Navigate, login, setlogin})
                   color: 'inherit',
                   textDecoration: 'none',
                 }}
+                onClick = {() => Navigate("Main Screen")}
               >
-                LOGO
+                Idle Spore
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 {pages.map((page) => (
                   <Button
                     key={page}
-                    onClick={handleCloseNavMenu}
+                    onClick={() => Navigate(page)}
                     sx={{ my: 2, color: 'white', display: 'block' }}
                   >
                     {page}

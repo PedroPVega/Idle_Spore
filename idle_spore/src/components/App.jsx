@@ -3,6 +3,9 @@ import MainScreen from '../pages/MainScreen';
 import SettingsScreen from '../pages/SettingsScreen';
 import GameScreen from '../pages/GameScreen';
 import DiscoverPage from '../pages/DiscoverPage';
+import NewsScreen from '../pages/NewsScreen';
+import ContactScreen from '../pages/ContactScreen';
+import SupportScreen from '../pages/SupportScreen';
 import LowerNavBar from './LowerNavBar';
 import UpperNavBar from './UpperNavBar';
 import './App.css';
@@ -17,6 +20,11 @@ function App() {
     console.log("option chosen : ", goalPage);
     switch (goalPage) 
     {
+      case 'Main Screen':
+      console.log('open main screen');
+      SetPage("MainScreen");
+      break;
+
       case 'Profile':
       console.log('open profile page');
       SetPage("SettingsScreen");
@@ -25,6 +33,26 @@ function App() {
       case 'Settings':
       console.log('open profile page');
       SetPage("SettingsScreen");
+      break;
+
+      case 'Report Bugs':
+      console.log('open support page');
+      SetPage("SupportScreen");
+      break;
+
+      case 'Contact':
+      console.log('open contact page');
+      SetPage("ContactScreen");
+      break;
+
+      case 'News':
+      console.log('open news page');
+      SetPage("NewsScreen");
+      break;
+
+      case 'Discover':
+      console.log('discover page');
+      SetPage("DiscoverPage");
       break;
 
       case 'Logout':
@@ -48,6 +76,9 @@ function App() {
       {page === "SettingsScreen" && <SettingsScreen/>}
       {page === "GameScreen" && <GameScreen/>}
       {page === "DiscoverPage" && <DiscoverPage/>}
+      {page === "SupportScreen" && <SupportScreen/>}
+      {page === "NewsScreen" && <NewsScreen/>}
+      {page === "ContactScreen" && <ContactScreen/>}
       <LowerNavBar page = {page} setPage = {SetPage}/>
     </div>
   );
