@@ -6,10 +6,13 @@ import DiscoverPage from '../pages/DiscoverPage';
 import NewsScreen from '../pages/NewsScreen';
 import ContactScreen from '../pages/ContactScreen';
 import SupportScreen from '../pages/SupportScreen';
+import LegalMentionsScreen from '../pages/LegalMentionsScreen';
+import SitePlanPage from '../pages/SitePlanPage';
 import LowerNavBar from './LowerNavBar';
 import UpperNavBar from './UpperNavBar';
 import './App.css';
 import React from 'react';
+
 
 function App() {
   const [loggedIn, SetLoggedIn] = useState(false)
@@ -55,6 +58,16 @@ function App() {
       SetPage("DiscoverPage");
       break;
 
+      case 'LMScreen':
+      console.log('legal mentions screen');
+      SetPage("LMScreen");
+      break;
+
+      case 'Site Page':
+      console.log('site page');
+      SetPage("SitePage");
+      break;
+
       case 'Logout':
       console.log('logout');
       SetLoggedIn(false);
@@ -79,7 +92,9 @@ function App() {
       {page === "SupportScreen" && <SupportScreen/>}
       {page === "NewsScreen" && <NewsScreen/>}
       {page === "ContactScreen" && <ContactScreen/>}
-      <LowerNavBar page = {page} setPage = {SetPage}/>
+      {page === "LMScreen" && <LegalMentionsScreen/>}
+      {page === "SitePage" && <SitePlanPage/>}
+      <LowerNavBar Navigate = {Navigate}/>
     </div>
   );
 }

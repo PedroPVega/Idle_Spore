@@ -1,6 +1,6 @@
 function GameScreen()
 {
-    return(<>This is the game screen</>)
+    return(<div>This is the game screen</div>)
 }
 
 export default GameScreen;

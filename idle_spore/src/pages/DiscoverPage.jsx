@@ -1,6 +1,6 @@
 function DiscoverPage()
 {
-    return(<>This is the discover page</>)
+    return(<div>This is the discover page</div>);
 }
 
 export default DiscoverPage;
