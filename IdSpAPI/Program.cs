@@ -10,7 +10,13 @@ builder.Services.AddSwaggerGen();
 // Add the database context to the application
 // This will allow the application to interact with the database
 builder.Services.AddDbContext<Context>();
-SeedData.Init();
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+    policy => policy.WithOrigins("http://localhost:3000") // React dev server
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -20,5 +26,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AllowReactApp");
 app.MapControllers();
 app.Run();
