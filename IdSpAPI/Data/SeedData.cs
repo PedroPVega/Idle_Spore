@@ -15,7 +15,7 @@ public static class SeedData
         Player Claverie = new()
         {
             Id = 0,
-            EmailAdress = "pfer0956@gmai.com",
+            EmailAdress = "pfer0956@gmail.com",
             Pseudo = "La Creature",
             Created = DateTime.Now,
         };
